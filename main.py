@@ -1,5 +1,5 @@
-from beautiful_tools.something import function, MethodResult, function_simple_iters
-from methods import bisection, simple_iteration
+from beautiful_tools.something import function, MethodResult, function_simple_iters, dif_function
+from methods import bisection, simple_iteration, newton_raphson
 
 
 
@@ -9,4 +9,5 @@ if __name__ == "__main__":
     eps = 1e-10
     bisection_result: MethodResult = bisection(a, b, function, eps)
     simple_iteration_result: MethodResult = simple_iteration(0.7, eps, function_simple_iters)
-    print(simple_iteration_result)
+    newton_raphson_result: MethodResult = newton_raphson(1, eps, function, dif_function)
+    print(newton_raphson_result)

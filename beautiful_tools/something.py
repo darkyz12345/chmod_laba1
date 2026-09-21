@@ -4,6 +4,9 @@ from dataclasses import dataclass
 def function(x: float|int) -> int|float:
     return x ** 3 + x - 1
 
+def dif_function(x: float|int) -> float|int:
+    return 3 * (x ** 2) + 1
+
 def function_simple_iters(x: float|int) -> float|int:
     return (1 - x) ** (1/3)
 
