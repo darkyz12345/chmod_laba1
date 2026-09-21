@@ -2,7 +2,7 @@ from collections.abc import Callable
 from beautiful_tools.something import MethodResult
 
 
-def bisection_method(a: int|float, 
+def bisection(a: int|float, 
                      b: int|float, 
                     func: Callable[[int|float], int|float],
                     eps: float) -> tuple[int, float, float]:
