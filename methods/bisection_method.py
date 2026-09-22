@@ -5,7 +5,7 @@ from beautiful_tools.something import MethodResult
 def bisection(a: int|float, 
                      b: int|float, 
                     func: Callable[[int|float], int|float],
-                    eps: float) -> tuple[int, float, float]:
+                    eps: float) -> MethodResult:
     """
 
     Args:
@@ -15,7 +15,7 @@ def bisection(a: int|float,
         eps (float): accuracy
 
     Returns:
-        tuple[int, float]: number of iterations, result
+        MethodResult: result of method 
     """
     fa, fb = func(a), func(b)
     if fa == 0:
